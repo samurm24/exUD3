@@ -1,10 +1,9 @@
 import random
-
 MAX_ENERGY = 100
 MIN_ENERGY = 0
-
-
 class Player:
+
+
     def __init__(self, idPlayer, nickname):
         self._idPlayer = idPlayer
         self._nickname = nickname
