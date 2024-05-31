@@ -17,11 +17,12 @@ class Game:
         return [(fuerza_aplicada_player1, energia_player1), (fuerza_aplicada_player2, energia_player2)]
 
     def winner(self):
+        ganador=""
         if self._player1.get_energy() > self._player2.get_energy():
-            return self._player1
-
-        if self._player2.get_energy() > self._player1.get_energy():
-            return self._player2
+            ganador = self._player1
+        elif self._player2.get_energy() > self._player1.get_energy():
+            ganador = self._player2
+        return ganador
 
 
     def play(self):
@@ -31,3 +32,4 @@ class Game:
 
 
         return self.winner()
+
